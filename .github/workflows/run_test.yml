@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Running Tests
-      run: ls && cd ${GITHUB_WORKSPACE} && mkdir build && cd build && cmake .. && make && test/tests
+      run: apt-get -y install libgtest-dev && ls && cd ${GITHUB_WORKSPACE} && mkdir build && cd build && cmake .. && make && test/tests
